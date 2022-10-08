@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import useOnClickOutside from '../hooks/useOnClickOutside'
 
 const options = [
-  { value: 'usd', text: 'USD' },
-  { value: 'eur', text: 'EUR' },
-  { value: 'dzd', text: 'DZD' },
+  { value: 'usd', text: 'USD - American Dollar' },
+  { value: 'eur', text: 'EUR - Euro' },
+  { value: 'dzd', text: 'DZD - Algerian Dinar' },
 ]
 
 const Select = ({ label, value, className, stateChanger }: any) => {
@@ -33,7 +33,7 @@ const Select = ({ label, value, className, stateChanger }: any) => {
   return (     
     <div className={`relative mt-1 ${className}`}>
       
-      <button onClick={() => setOpen(open => (!open))} type="button" className="relative w-full cursor-default border-b bg-white py-4 text-left hover:border-blue-200 focus:border-blue-600 sm:text-sm">
+      <button onClick={() => setOpen(open => (!open))} type="button" className="relative w-full cursor-default border-b bg-white py-4 text-left hover:border-indigo-300 focus:border-indigo-600 sm:text-sm">
         
         <span className="block text-xs font-semibold text-slate-400">{label}</span>
         <span className="block text-xl">{selectedOption.text}</span>
@@ -55,7 +55,7 @@ const Select = ({ label, value, className, stateChanger }: any) => {
               <span className="font-normal block truncate">{option.text}</span>
             </div>
 
-            {option.value === selectedOption && <span className="text-indigo-600 absolute inset-y-0 right-0 flex items-center pr-4">
+            {option.value === selectedOption.value && <span className="text-indigo-600 absolute inset-y-0 right-0 flex items-center pr-4">
               <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
               </svg>

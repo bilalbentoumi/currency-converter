@@ -12,16 +12,11 @@ const App = () => {
 
   useEffect(() => {
 
-    convertCurrency()
-  }, [baseCurrency, targetCurrency, amount])
-
-  const convertCurrency = () => {
-
     convert(baseCurrency, targetCurrency, amount).then(res => {
 
       setResult(res)
     })
-  }
+  }, [baseCurrency, targetCurrency, amount])
 
   return (
     <>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import moment from 'moment'
 import NavBar from './components/NavBar'
 import Select from './components/Select'
 import { convert } from './utils/converter'
@@ -28,7 +29,7 @@ const App = () => {
         <div className="container py-4 sm:py-16">
 
           <h2 className="text-slate-700 text-3xl font-semibold">Currency Converter</h2>
-          <span className="text-slate-500 text-xs font-medium">Today, 2022-10-07</span>
+          <span className="text-slate-500 text-xs font-medium">{'Today ' + moment().format('Y-M-DD HH:mm')}</span>
 
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4 sm:gap-10 mt-10">
 

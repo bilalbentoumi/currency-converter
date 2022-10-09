@@ -19,7 +19,7 @@ const Select = ({ label, value, className, stateChanger }: any) => {
     setSelectedOption(options.filter((option) => option.value === value).pop() ?? options[0])
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [value])
 
   const select = (option: any) => {
 

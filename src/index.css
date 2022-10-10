@@ -19,3 +19,7 @@ html, body, #root {
 .container {
   @apply max-w-7xl px-2 sm:px-6 lg:px-8 mx-auto;
 }
+
+body {
+  @apply bg-gray-50;
+}

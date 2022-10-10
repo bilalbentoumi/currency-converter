@@ -40,9 +40,9 @@ const App = () => {
 
           <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4 sm:gap-10 mt-2 sm:mt-10">
 
-            <div className="flex-1">
+            <div className="flex-1 bg-white p-4 shadow rounded-md">
               <Select label="From" value={baseCurrency} stateChanger={setBaseCurrency} />
-              <input type="text" className="w-full text-6xl mt-10" placeholder="1000" value={amount}
+              <input type="text" className="w-full text-6xl mt-10" placeholder="€" value={amount}
                 onChange={(e) => setAmount(e.target.value)} />
             </div>
 
@@ -52,9 +52,9 @@ const App = () => {
               </svg>
             </button>
 
-            <div className="flex-1">
+            <div className="flex-1 bg-white p-4 shadow rounded-md">
               <Select label="To" value={targetCurrency} stateChanger={setTargetCurrency} />
-              <input type="text" className="w-full text-6xl mt-10" placeholder="1000" value={result} readOnly />
+              <input type="text" className="w-full text-6xl mt-10" placeholder="$" value={result !== 0 ? result : ''} readOnly />
             </div>
 
           </div>

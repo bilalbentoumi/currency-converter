@@ -35,14 +35,14 @@ const App = () => {
 
         <div className="container py-4 sm:py-16">
 
-          <h2 className="text-slate-700 text-3xl font-semibold">Currency Converter</h2>
+          <h2 className="text-slate-700 text-2xl sm:text-3xl font-semibold">Currency Converter</h2>
           <span className="text-slate-500 text-xs font-medium">{'Today ' + moment().format('Y-M-DD HH:mm')}</span>
 
-          <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4 sm:gap-10 mt-2 sm:mt-10">
+          <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4 sm:gap-10 mt-6 sm:mt-10">
 
             <div className="flex-1 bg-white p-4 shadow rounded-md">
               <Select label="From" value={baseCurrency} stateChanger={setBaseCurrency} />
-              <input type="text" className="w-full text-6xl mt-10" placeholder="€" value={amount}
+              <input type="text" className="w-full text-3xl sm:text-6xl mt-4 sm:mt-10" placeholder={baseCurrency.toUpperCase()} value={amount}
                 onChange={(e) => setAmount(e.target.value)} />
             </div>
 
@@ -54,7 +54,7 @@ const App = () => {
 
             <div className="flex-1 bg-white p-4 shadow rounded-md">
               <Select label="To" value={targetCurrency} stateChanger={setTargetCurrency} />
-              <input type="text" className="w-full text-6xl mt-10" placeholder="$" value={result !== 0 ? result : ''} readOnly />
+              <input type="text" className="w-full text-3xl sm:text-6xl mt-4 sm:mt-10" placeholder={targetCurrency.toUpperCase()} value={result !== 0 ? result : ''} readOnly />
             </div>
 
           </div>
@@ -62,6 +62,12 @@ const App = () => {
         </div>
         
       </div>
+
+      <footer className="footer">
+        <div className="container py-6 text-center border-t">
+            <p className="text-slate-500">Made with <span className="text-red-400 text-xl">♥</span> by Bilal Bentoumi</p>
+        </div>
+    </footer>
 
     </>
   )

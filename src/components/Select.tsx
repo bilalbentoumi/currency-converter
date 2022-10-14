@@ -32,7 +32,7 @@ const Select = ({ label, value, options, stateChanger }: any) => {
         <span className="block text-xs font-semibold text-slate-400">{label}</span>
         
         <div className="flex items-center">
-          <img src={'flags/' + selectedOption.value + '.png'} className="w-8 rounded-sm mr-3" />
+          <img src={'flags/' + selectedOption.value + '.png'} className="w-8 rounded-sm mr-3" alt={selectedOption.text} />
           <span className="block text-xl">{selectedOption.text}</span>
         </div>
         
@@ -50,7 +50,7 @@ const Select = ({ label, value, options, stateChanger }: any) => {
           <li key={option.value} onClick={() => {select(option)}} className="hover:bg-gray-100 text-gray-900 relative cursor-default select-none py-2 pl-3 pr-9">
             
             <div className="flex items-center">
-              <img src={'flags/' + option.value + '.png'} className="w-6 rounded-sm mr-2" />
+              <img src={'flags/' + option.value + '.png'} className="w-6 rounded-sm mr-2" alt={option.text} />
               <span className="font-normal block truncate">{option.value.toUpperCase() + ' - ' + option.text}</span>
             </div>
 
